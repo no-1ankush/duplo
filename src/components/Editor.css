@@ -1,0 +1,7 @@
+.BG {
+   height: 580px;
+   background-image: url(transparentBG.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat:  repeat;
+}
