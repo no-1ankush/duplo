@@ -26,8 +26,38 @@ class AvailableApi extends Component {
       internalApiModalOpenState: false,
       externalApiModalOpenState: false,
       externalApiOperation: "GET",
-      availableApis: [{}],
-      internalOpenApi: {},
+      availableApis: [
+        {
+          name: 'GET PATIENTS'
+        },
+        {
+          name: 'GET PHYSICIANS'
+        },
+        {
+          name: 'ADD PATIENT'
+        },
+        {
+          name: 'ADD PHYSICIAN'
+        },
+        {
+          name: 'UPDATE PATIENT'
+        },
+        {
+          name: 'UPDATE PHYSICIAN'
+        },
+        {
+          name: 'DELETE PATIENT'
+        },
+        {
+          name: 'DELETE PHYSICIAN'
+        },
+      ],
+      internalOpenApi: {
+        name: 'GET PATIENTS',
+        description: 'Retrives all patients information',
+        path: 'http://localhost:8999/patients',
+        operationType: 'GET'
+      },
   }
 
   handleInternalApiModalClose = () => {
@@ -52,7 +82,7 @@ class AvailableApi extends Component {
       });
   };
 
-  componentDidMount() {
+  /*componentDidMount() {
       fetch('http://localhost:8999/resources')
             .then(response => response.json())
             .then(response => {
@@ -63,7 +93,7 @@ class AvailableApi extends Component {
             .catch(error => {
               console.log(error)
             })
-  }
+  }*/
 
   render() {
     const { classes } = this.props;
